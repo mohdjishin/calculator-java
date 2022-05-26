@@ -22,6 +22,13 @@ public class Calculator implements ActionListener{
 	JButton twoButton;
 	JButton threeButton ;
 	JButton zeroButton;
+	
+	JButton divButton;
+	JButton multButton ;
+	JButton minusButton ;
+	JButton dotButton;
+	JButton eqltoButton;
+	JButton plusButton ;
 	public Calculator(){
 		
 		jf = new JFrame("Calculator");
@@ -29,7 +36,7 @@ public class Calculator implements ActionListener{
 		jf.setSize(450, 600);
 		jf.setLocation(100, 200);
 		
-		displayLable = new JLabel("Hello");
+		displayLable = new JLabel();
 		displayLable.setBounds(30, 50, 370, 40);
 		displayLable.setBackground(Color.gray);
 		displayLable.setOpaque(true);
@@ -59,7 +66,7 @@ public class Calculator implements ActionListener{
 		nineButton.addActionListener(this);
 		jf.add(nineButton);
 		
-		JButton divButton = new JButton("/");
+		divButton = new JButton("/");
 		divButton.setBounds(310, 130, 50, 50);
 		divButton.setFont(new Font("Serif", Font.BOLD, 20));
 		jf.add(divButton);
@@ -86,7 +93,7 @@ public class Calculator implements ActionListener{
 		sixButton.addActionListener(this);
 		jf.add(sixButton);
 		
-		JButton multButton = new JButton("X");
+		multButton = new JButton("X");
 		multButton.setBounds(310, 220, 50, 50);
 		multButton.setFont(new Font("Serif", Font.BOLD, 20));
 		jf.add(multButton);
@@ -112,13 +119,13 @@ public class Calculator implements ActionListener{
 		threeButton.addActionListener(this);
 		jf.add(threeButton);
 		
-		JButton minusButton = new JButton("-");
+		minusButton = new JButton("-");
 		minusButton.setBounds(310, 310, 50, 50);
 		minusButton.setFont(new Font("Serif", Font.BOLD, 20));
 		jf.add(minusButton);
 		
 		//fourth line
-		JButton dotButton = new JButton(".");
+		dotButton = new JButton(".");
 		dotButton.setBounds(40, 400, 50, 50);
 		dotButton.setFont(new Font("Serif", Font.BOLD, 20));
 		jf.add(dotButton);
@@ -131,12 +138,12 @@ public class Calculator implements ActionListener{
 		jf.add(zeroButton);
 		
 		
-		JButton eqltoButton = new JButton("=");
+		eqltoButton = new JButton("=");
 		eqltoButton.setBounds(220, 400, 50, 50);
 		eqltoButton.setFont(new Font("Serif", Font.BOLD, 15));
 		jf.add(eqltoButton);
 		
-		JButton plusButton = new JButton("+");
+		plusButton = new JButton("+");
 		plusButton.setBounds(310, 400, 50, 50);
 		plusButton.setFont(new Font("Serif", Font.BOLD, 15));
 		jf.add(plusButton);
@@ -159,32 +166,48 @@ public class Calculator implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()==sevenButton) {
-			displayLable.setText("7");
+			displayLable.setText(displayLable.getText()+"7");
 			}else if(e.getSource() == eightButton) {
-				displayLable.setText("8");
+				displayLable.setText(displayLable.getText()+"8");
 				
 			}else if(e.getSource()== nineButton) {
-				displayLable.setText("9");
+				displayLable.setText(displayLable.getText()+"9");
 			}else if(e.getSource() == fourButton) {
-				displayLable.setText("4");
+				displayLable.setText(displayLable.getText()+"4");
 				
 			}else if(e.getSource()== fiveButton) {
-				displayLable.setText("5");
+				displayLable.setText(displayLable.getText()+"5");
 			}else if(e.getSource() == sixButton) {
-				displayLable.setText("6");
+				displayLable.setText(displayLable.getText()+"6");
 				
 			}else if(e.getSource()== oneButton) {
-				displayLable.setText("1");
+				displayLable.setText(displayLable.getText()+"1");
 			}else if(e.getSource() == twoButton) {
-				displayLable.setText("2");
+				displayLable.setText(displayLable.getText()+"2");
 				
 			}else if(e.getSource()== threeButton) {
-				displayLable.setText("3");
+				displayLable.setText(displayLable.getText()+"3");
 			}else if(e.getSource()== zeroButton) {
-				displayLable.setText("0");
+				displayLable.setText(displayLable.getText()+"0");
+			}else if(e.getSource()==divButton) {
+				
+			}else if(e.getSource()==multButton) {
+				
+			}else if(e.getSource()==minusButton) {
+				
+			}else if(e.getSource()==dotButton) {
+				
+			}else if(e.getSource()==eqltoButton) {
+				
+			}else if(e.getSource()==plusButton) {
+				
 			}
 	
 	
+		
+		
+		
+		
 		
 		
 	}

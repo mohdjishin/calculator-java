@@ -1,20 +1,35 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class Calculator {
+public class Calculator implements ActionListener{
+	
+	JFrame jf;
+	JLabel displayLable ;
+	JButton sevenButton;
+	JButton eightButton ;
+	JButton nineButton;
+	JButton fourButton;
+	JButton fiveButton;
+	JButton sixButton;
+	JButton oneButton;
+	JButton twoButton;
+	JButton threeButton ;
+	JButton zeroButton;
 	public Calculator(){
 		
-		JFrame jf = new JFrame("Calculator");
+		jf = new JFrame("Calculator");
 		jf.setLayout(null);
 		jf.setSize(450, 600);
 		jf.setLocation(100, 200);
 		
-		JLabel displayLable = new JLabel("Hello");
+		displayLable = new JLabel("Hello");
 		displayLable.setBounds(30, 50, 370, 40);
 		displayLable.setBackground(Color.gray);
 		displayLable.setOpaque(true);
@@ -23,23 +38,25 @@ public class Calculator {
 		jf.add(displayLable);
 		
 		//buttons....
-		JButton sevenButton = new JButton("7");
+		sevenButton = new JButton("7");
 		sevenButton.setBounds(40, 130, 50, 50);
-
 		sevenButton.setFont(new Font("Serif", Font.BOLD, 20));
-
+		sevenButton.addActionListener(this);
 		jf.add(sevenButton);
 		
 		
-		JButton eightButton = new JButton("8");
+		eightButton = new JButton("8");
 		eightButton.setBounds(130, 130, 50, 50);
 		eightButton.setFont(new Font("Serif", Font.BOLD, 20));
+		eightButton.addActionListener(this);
+		
 		jf.add(eightButton);
 		
 		
-		JButton nineButton = new JButton("9");
+		nineButton = new JButton("9");
 		nineButton.setBounds(220, 130, 50, 50);
 		nineButton.setFont(new Font("Serif", Font.BOLD, 20));
+		nineButton.addActionListener(this);
 		jf.add(nineButton);
 		
 		JButton divButton = new JButton("/");
@@ -49,21 +66,24 @@ public class Calculator {
 		
 		// second line
 		
-		JButton fourButton = new JButton("4");
+		fourButton = new JButton("4");
 		fourButton.setBounds(40, 220, 50, 50);
 		fourButton.setFont(new Font("Serif", Font.BOLD, 20));
+		fourButton.addActionListener(this);
 		jf.add(fourButton);
 		
 		
-		JButton fiveButton = new JButton("5");
+		fiveButton = new JButton("5");
 		fiveButton.setBounds(130, 220, 50, 50);
 		fiveButton.setFont(new Font("Serif", Font.BOLD, 20));
+		fiveButton.addActionListener(this);
 		jf.add(fiveButton);
 		
 		
-		JButton sixButton = new JButton("6");
+		sixButton = new JButton("6");
 		sixButton.setBounds(220, 220, 50, 50);
 		sixButton.setFont(new Font("Serif", Font.BOLD, 20));
+		sixButton.addActionListener(this);
 		jf.add(sixButton);
 		
 		JButton multButton = new JButton("X");
@@ -72,21 +92,24 @@ public class Calculator {
 		jf.add(multButton);
 		
 		// third line..
-		JButton oneButton = new JButton("1");
+		oneButton = new JButton("1");
 		oneButton.setBounds(40, 310, 50, 50);
 		oneButton.setFont(new Font("Serif", Font.BOLD, 20));
+		oneButton.addActionListener(this);
 		jf.add(oneButton);
 		
 		
-		JButton twoButton = new JButton("2");
+		twoButton = new JButton("2");
 		twoButton.setBounds(130, 310, 50, 50);
 		twoButton.setFont(new Font("Serif", Font.BOLD, 20));
+		twoButton.addActionListener(this);
 		jf.add(twoButton);
 		
 		
-		JButton threeButton = new JButton("3");
+		threeButton = new JButton("3");
 		threeButton.setBounds(220, 310, 50, 50);
 		threeButton.setFont(new Font("Serif", Font.BOLD, 20));
+		threeButton.addActionListener(this);
 		jf.add(threeButton);
 		
 		JButton minusButton = new JButton("-");
@@ -101,9 +124,10 @@ public class Calculator {
 		jf.add(dotButton);
 		
 		
-		JButton zeroButton = new JButton("0");
+		zeroButton = new JButton("0");
 		zeroButton.setBounds(130, 400, 50, 50);
 		zeroButton.setFont(new Font("Serif", Font.BOLD, 20));
+		zeroButton.addActionListener(this);
 		jf.add(zeroButton);
 		
 		
@@ -128,6 +152,40 @@ public class Calculator {
 	public static void main(String ar[]) {
 		
 		 new Calculator();
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==sevenButton) {
+			displayLable.setText("7");
+			}else if(e.getSource() == eightButton) {
+				displayLable.setText("8");
+				
+			}else if(e.getSource()== nineButton) {
+				displayLable.setText("9");
+			}else if(e.getSource() == fourButton) {
+				displayLable.setText("4");
+				
+			}else if(e.getSource()== fiveButton) {
+				displayLable.setText("5");
+			}else if(e.getSource() == sixButton) {
+				displayLable.setText("6");
+				
+			}else if(e.getSource()== oneButton) {
+				displayLable.setText("1");
+			}else if(e.getSource() == twoButton) {
+				displayLable.setText("2");
+				
+			}else if(e.getSource()== threeButton) {
+				displayLable.setText("3");
+			}else if(e.getSource()== zeroButton) {
+				displayLable.setText("0");
+			}
+	
+	
+		
 		
 	}
 	
